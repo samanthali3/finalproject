@@ -1,0 +1,58 @@
+---
+title: "Employee Workload and Attrition Analysis"
+author: "Samantha Li"
+date: "`r format(Sys.Date(), '%m-%d-%y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, here-i-am, include = FALSE}
+here::i_am("hr_report.Rmd")
+```
+
+```{r, load_data, echo = FALSE}
+data <- read.csv(
+  file = here::here("data/employee_performance_workload_attrition.csv"), header = TRUE
+)
+```
+
+# Introduction
+
+This data set, Employee Workload and Attrition Analysis, contains different types of factors in the workforce that might impact employee attrition. Each row represents an individual employee and each column is a different workforce factor, like salary or working hours.These factors are self-reported information. The goal of this analysis is to select certain factors and see if they can predict employee attrition, which can help organizations who want to cut down on attrition rates since attrition can be costly. Specifically in this portion, I will be examining whether an employee's performance rating has a measurable effect on their attrition status. To test this, I will be conducting a two-sample t-test.
+
+# Descriptive Analysis
+## Tabular Analysis
+
+The attrition statuses and performance ratings of the `r nrow(data)` employees from the data set are displayed in the table below. An attrition status of "Yes" means the employee left the organization. An attrition status of "No" indicates the employee stayed with the organization.
+
+```{r, table1}
+readRDS(
+  file = here::here("output/table_one.rds")
+)
+```
+
+## Graphical Analysis
+
+Below is a boxplot depicting the the performance ratings by attrition status.
+
+```{r, boxplot, fig.align = "center", out.width="600px"}
+readRDS(
+  file = here::here("output/boxplot.rds")
+)
+```
+
+
+```{r, t-test, eval=FALSE}
+#running my two-sample t-test
+t_test_result <- t.test(data = data, performance_rating ~ attrition)
+
+#printing out my t-test results
+t_test_result
+```
+
+# Closing Remarks
+
+The boxplot suggests that employees who left the organization had lower performance ratings on average. Additionally, the performance ratings among employees who left are more variable, suggesting that I may need to look into other potential factors affecting attrition status.

@@ -29,3 +29,8 @@ The project produces a report that includes the below in the body of the report:
 `Makefile`
   - Contains rules for building the final report
   - Typing `make` in the command line should execute and create the final report `hr_report.html`
+  
+## Instructions
+  - Open the Makefile
+  - Run `make install` to synchronize the package repository
+  - Once the library is synchronized (with the lockfile), run `make` to create the final report `hr_report.html`

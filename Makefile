@@ -9,3 +9,8 @@ output/table_one.rds: code/01_make_table.R
 #building the output of code/02_make_box.R
 output/boxplot.rds: code/02_make_box.R
 	Rscript code/02_make_box.R
+	
+#creating a shortcut for restoring the package environment
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt=FALSE)"

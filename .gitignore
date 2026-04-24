@@ -1,3 +1,5 @@
 .DS_Store
 peer review/
 hr_report.html
+.Rproj.user
+output/*.rds

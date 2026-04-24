@@ -13,7 +13,7 @@ output/boxplot.rds: code/02_make_box.R
 #Cleans the output folder
 .PHONY: clean
 clean:
-rm output/*.rds
+	rm output/*.rds
 	
 #Creates a shortcut for restoring the package environment
 .PHONY: install

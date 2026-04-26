@@ -10,6 +10,8 @@ library(ggplot2)
 
 boxplot <- ggplot(data, aes(x = attrition, y = performance_rating, fill = attrition))+
   geom_boxplot()+
+  scale_fill_manual(values = c("Yes" = "lightblue",
+                               "No" = "mistyrose"))+
   labs(title = "Performance Rating by Attrition Status",
        x = "Attrition Status",
        y = "Performance Rating")

@@ -21,7 +21,7 @@ data <- read.csv(
 
 # Introduction
 
-This data set, Employee Workload and Attrition Analysis, contains different types of factors in the workforce that might impact employee attrition. Each row represents an individual employee and each column is a different workforce factor, like salary or working hours.These factors are self-reported information. The goal of this analysis is to select certain factors and see if they can predict employee attrition, which can help organizations who want to cut down on attrition rates since attrition can be costly. Specifically in this portion, I will be examining whether an employee's performance rating has a measurable effect on their attrition status. To test this, I will be conducting a two-sample t-test.
+This data set, Employee Workload and Attrition Analysis, contains different types of factors in the workforce that might impact employee attrition. Each row represents an individual employee and each column is a different workforce factor, like salary or working hours. These factors are self-reported information. The goal of this analysis is to select certain factors and see if they can predict employee attrition, which can help organizations cut down on attrition rates since attrition can be costly. Specifically in this report, I will be examining whether an employee's performance rating has a measurable effect on their attrition status. To test this, I will be conducting a two-sample t-test.
 
 # Descriptive Analysis
 ## Tabular Analysis
@@ -55,4 +55,4 @@ t_test_result
 
 # Closing Remarks
 
-The boxplot suggests that employees who left the organization had lower performance ratings on average. Additionally, the performance ratings among employees who left are more variable, suggesting that I may need to look into other potential factors affecting attrition status.
+The boxplot suggests that employees who left the organization had lower performance ratings on average. Additionally, the performance ratings among employees who left are more variable, suggesting that a future report could look into the other potential factors affecting attrition status.
